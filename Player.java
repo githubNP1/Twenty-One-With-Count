@@ -3,11 +3,8 @@ package Twenty_One_Test;
 import java.util.*;
 
 public class Player {
-    int chips;  //this is decided at beginning
+    int chips;  
     ArrayList<Hand> hands = new ArrayList<>();
-    //Hand hand = new Hand();
-    //Hand secondHand = new Hand(false);
-    //Boolean split = false;
     Boolean insurance = false;
     int insuranceBet;
     Boolean natural = false;
@@ -29,16 +26,6 @@ public class Player {
         getFirstHand().hand.remove(1);
         getFirstHand().splittable = false;
         
-    }
-    
-    public void seeCards(){ //prints faceup cards
-        for(Hand hand : hands){
-            System.out.print("You have "); 
-            for(Card card : hand.hand){
-                if(card.faceUp){System.out.print("a " + card.number + " of " + card.suit + ", ");}
-            }
-            System.out.println();
-        }
     }
     
     public void checkIfFirstHandCanBeSplit(){
