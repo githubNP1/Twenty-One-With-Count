@@ -51,12 +51,4 @@ public class Dealer {
         }
         return null;
     }
-    
-    public void seeCards(){  //prints faceup cards
-        System.out.print("The dealer has "); 
-        for(Card card : hand.hand){
-            if(card.faceUp){System.out.print("a " + card.number + " of " + card.suit + ", ");}
-        }
-        System.out.println();
-    } 
 }
