@@ -2,6 +2,8 @@
 - Just run the Main class to start the game
 This is the same as the other Twenty One repository but has an added feature. The cards are being counted by the program and along with using a strategy table, the program advises the player on how much to bet and what moves to make in order to increase the player's chance of winning.
 
+The program decides how much the player should bet based on multiplying the true count by the betting unit. The betting unit is calculated by dividing the player's remaining chips by 500. Also, if the true count is above 4, than it is counted as 4 and if it is lower than 0.25, it is counted as 0.25.
+
 # Rules
 
 - 6 decks are shuffled and used
