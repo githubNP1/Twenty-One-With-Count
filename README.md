@@ -1,5 +1,5 @@
 # Twenty-One-With-Count
-
+- Just run the Main class to start the game
 This is the same as the other Twenty One repository but has an added feature. The cards are being counted by the program and along with using a strategy table, the program advises the player on how much to bet and what moves to make in order to increase the player's chance of winning.
 
 # Rules
