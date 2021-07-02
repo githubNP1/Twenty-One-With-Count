@@ -7,8 +7,6 @@ public class Hand {
     Boolean bust = false;
     Boolean doubled = false;
     Boolean splittable;
-    //Boolean natural = false;
-    //int score;
     int bet;
     
     public Hand(){}
