@@ -3,7 +3,7 @@ package Twenty_One_Test;
 public class Card {
     String number;
     String suit;
-    int value; //condense
+    int value; 
     int x1, x2, y1, y2;
     int count;
     Boolean faceUp;
