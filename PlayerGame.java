@@ -49,14 +49,12 @@ public class PlayerGame extends Main implements ActionListener{
             if(deck.size() < 30){
                 deck = new ArrayList<>(fullDeck);
                 Collections.shuffle(deck); 
-                //display.setText("Deck reshuffled"); 
             }
             playerMakesBet(player);
             initialDeal(player, dealer);
             initialPlay(player, dealer);
             cardsPlayed.addAll(player.getFirstHand().hand);
             cardsPlayed.addAll(dealer.hand.hand);
-            //labelRunningCount.setText("RUNNING COUNT: " + runningCount); 
         }
     }
     
@@ -75,7 +73,6 @@ public class PlayerGame extends Main implements ActionListener{
                 runningCount++;
             }
         }
-        //System.out.println(runningCount);
         double decksRemaining = (312 - cardsPlayed.size()) / 52;
         return runningCount / decksRemaining;
     }
@@ -85,7 +82,6 @@ public class PlayerGame extends Main implements ActionListener{
         double t = calcRunningCount();
         if(t > 4){t = 4;}
         if(t < 0.25){t = 0.25;}
-        //System.out.println(t);
         return (int) (t * unit);
     }
     
@@ -127,7 +123,7 @@ public class PlayerGame extends Main implements ActionListener{
         catch (Exception e) {System.out.println(e);}
     }
     
-    public void setupScreen(){ //could be condensed?
+    public void setupScreen(){ 
         this.setLayout(null); 
         moveButtons = new ArrayList<>();
         chipButtons = new ArrayList<>();      
@@ -371,12 +367,6 @@ public class PlayerGame extends Main implements ActionListener{
         hit(dealer.hand, true);
         hit(player.getFirstHand(), true);
         hit(dealer.hand, false);
-        //player.getFirstHand().add(deck.get(0), true); 
-        //dealer.hand.add(deck.get(1), true); 
-        //player.getFirstHand().add(deck.get(2), true);  
-        //add 3 cards to count
-        //dealer.hand.add(deck.get(3), false); 
-        //deck.removeIf(n -> (deck.indexOf(n) >= 0 && deck.indexOf(n) <= 3)); 
         playerFirstCards = player.getFirstHand().hand; 
         repaint();
         firstScore.setVisible(true);
@@ -779,4 +769,3 @@ public class PlayerGame extends Main implements ActionListener{
         return null;
     }
 }
-//running count is not live - only done after round is finished
