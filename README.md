@@ -16,7 +16,7 @@ The program decides how much the player should bet based on multiplying the true
 
 - A natural pays 1.5 times the player's bet
 - Player can only split once
-- Player can split any pair
+- Player can split any cards with the same type, not value
 
 - Player can only double on first move if first 2 cards add to 9, 10 or 11
 - Ace counts as 1 or 11
